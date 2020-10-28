@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="홈"
+        android:icon="@drawable/bottom_home"
+        android:id="@+id/homeid"/>
+    <item
+        android:title="장바구니"
+        android:icon="@drawable/bottom_middle"
+        android:id="@+id/middleid"/>
+    <item
+        android:title="구매"
+        android:icon="@drawable/bottom_right"
+        android:id="@+id/rightid"/>
+</menu>
