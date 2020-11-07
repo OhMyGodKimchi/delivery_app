@@ -11,7 +11,7 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="490dp"
         android:layout_marginBottom="?attr/actionBarSize"
         android:id="@+id/frameid"/>
 

@@ -9,16 +9,23 @@ import com.google.android.material.tabs.TabLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.View;
 
 public class MainActivity2 extends AppCompatActivity {
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+
 
         Intent intent = getIntent();
         int country = intent.getExtras().getInt("country");
@@ -30,9 +37,9 @@ public class MainActivity2 extends AppCompatActivity {
 
         ViewPager viewPager = findViewById(R.id.view_page);
 
-        DetailPageAdapter detailPageAdapter = new DetailPageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+       DetailPageAdapter detailPageAdapter = new DetailPageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
 
-        viewPager.setAdapter(detailPageAdapter);
+       viewPager.setAdapter(detailPageAdapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
