@@ -3,27 +3,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyHomeFragment"
-    android:orientation="vertical">
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    tools:context=".MyHomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
 
     <Button
+        android:id="@+id/kfood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="한식"
-        android:id="@+id/kfood"/>
+        />
 
     <Button
+        android:id="@+id/jfood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="일식"
-        android:id="@+id/jfood"/>
+        android:layout_margin="20dp"/>
+
     <Button
+        android:id="@+id/cfood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="중식"
-        android:id="@+id/cfood"/>
+        android:text="중식" />
+
+    </LinearLayout>
+
 
 </LinearLayout>

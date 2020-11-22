@@ -2,33 +2,34 @@ package com.example.start;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.example.start.main.DetailFoodActivty;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import android.view.View;
-
 public class MainActivity2 extends AppCompatActivity {
+
+    public int num;
 
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
 
 
+
+
         Intent intent = getIntent();
         int country = intent.getExtras().getInt("country");
+
 
         TabLayout tabLayout = findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("한식"));
@@ -46,6 +47,11 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
+                Log.d("number","what "+tab.getPosition());
+
+
+
+
             }
 
             @Override
@@ -63,5 +69,8 @@ public class MainActivity2 extends AppCompatActivity {
 
 
 
+    }
+    public int getPosition(int num){
+        return this.num = num;
     }
 }
